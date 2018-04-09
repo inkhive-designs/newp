@@ -24,7 +24,7 @@
  */
 function newp_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'newp_custom_header_args', array(
-		'default-image'          => get_template_directory_uri().'/assets/images/header.jpg',
+		'default-image'          => get_template_directory_uri().'/assets/images/header.jpeg',
 		'default-text-color'     => '#fff',
 		'height'				 => 300,
 		'width'					 => 1440,
@@ -32,6 +32,14 @@ function newp_custom_header_setup() {
 		'admin-head-callback'    => 'newp_admin_header_style',
 		'admin-preview-callback' => 'newp_admin_header_image',
 	) ) );
+    register_default_headers( array(
+            'default-image'    => array(
+                'url'            => '%s/assets/images/header.jpeg',
+                'thumbnail_url'    => '%s/assets/images/header.jpeg',
+                'description'    => __('Default Header Image', 'newp')
+            )
+        )
+    );
 }
 add_action( 'after_setup_theme', 'newp_custom_header_setup' );
 

@@ -23,9 +23,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<?php printf( __( 'Powered by %1$s.', 'newp' ), '<a href="'.esc_url("https://inkhive.com/product/newp/").'" rel="nofollow">Newp WordPress Theme</a>' ); ?>
+			<?php printf( __( 'Powered by %1$s.', 'newp' ), '<a target="blank" href="'.esc_url("https://inkhive.com/product/newp/").'" rel="nofollow">Newp WordPress Theme</a>' ); ?>
 			<span class="sep"></span>
-			<?php echo ( get_theme_mod('newp_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','newp')) : esc_html( get_theme_mod('newp_footer_text') ); ?>
+			<?php echo ( esc_html(get_theme_mod('newp_footer_text')) == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','newp')) : esc_html( get_theme_mod('newp_footer_text') ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	

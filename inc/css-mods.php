@@ -22,11 +22,11 @@ function newp_custom_css_mods() {
 	
 	
 	if ( get_theme_mod('newp_title_font') ) :
-		echo ".title-font, h1, h2, .section-title { font-family: ".esc_html(get_theme_mod('newp_title_font','Roboto Condensed'))."; }";
+		echo ".title-font, h1, h2, .section-title { font-family: ".esc_html(get_theme_mod('newp_title_font','Montserrat'))."; }";
 	endif;
 	
 	if ( get_theme_mod('newp_body_font') ) :
-		echo "body { font-family: ".esc_html(get_theme_mod('newp_body_font','Lato'))."; }";
+		echo "body { font-family: ".esc_html(get_theme_mod('newp_body_font','Source Sans Pro'))."; }";
 	endif;
 	
 	if ( get_theme_mod('newp_site_titlecolor','#919191') ) :

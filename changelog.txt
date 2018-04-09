@@ -28,4 +28,12 @@ Version 2.0.4
 	
 Version 2.0.5
 
-	i) Corrected Credit Links	
+	i) Corrected Credit Links
+
+Version: 2.1.0
+
+    i) Framework update.
+    ii) Blog layout
+    iii) Google fonts major bug fixed.
+    iv) Header Image minor bug fixed.
+    v) logo minor bug fixed.

@@ -4,7 +4,7 @@
 	<div class="popular-articles col-md-12">
 		<?php if (get_theme_mod('newp_box_title') ) : ?>
 		<div class="section-title">
-			<?php echo get_theme_mod('newp_box_title'); ?>
+			<?php echo esc_html(get_theme_mod('newp_box_title')); ?>
 		</div>
 		<?php endif; ?>	
 		
@@ -18,9 +18,9 @@
 				    <div class="col-md-3 col-sm-6 col-xs-6 imgcontainer">
 				    	<div class="popimage">
 				        <?php if (has_post_thumbnail()) : ?>	
-								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('newp-pop-thumb'); ?></a>
+								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('newp-pop-thumb',array('alt' => trim(strip_tags( $post->post_title )))); ?></a>
 						<?php else : ?>
-								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
+								<a href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><img alt="<?php the_title() ?>" src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
 						<?php endif; ?>
 							<div class="titledesc title-font">
 				            <h2><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>
